@@ -9,8 +9,9 @@ public class FileReader
 {
     AminoAcids aminokwasy = new AminoAcids();
 
-    public void fileChooser()
-    {
+    public void fileChooser() throws FileNotFoundException {
+
+        PrintWriter saveResult = new PrintWriter("wynik.txt");
         String path = "";
 
         JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
@@ -41,7 +42,7 @@ public class FileReader
                 {
                     input2 = list.get(i);
                   //  System.out.println(input2);
-                    aminokwasy.changePossible(input1, input2);
+                    saveResult.println(aminokwasy.changePossible(input1, input2));
                 }
 
             }
@@ -49,5 +50,6 @@ public class FileReader
         {
             e.printStackTrace();
         }
+        saveResult.close();
     }
 }
