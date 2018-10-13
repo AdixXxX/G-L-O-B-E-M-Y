@@ -1,15 +1,13 @@
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import java.io.File;
-import java.io.IOException;
-
 
 public class FileReader
 {
-    Aminokwasy aminokwasy = new Aminokwasy();
+    AminoAcids aminokwasy = new AminoAcids();
 
     public void fileChooser()
     {
@@ -26,7 +24,6 @@ public class FileReader
 
         String input1 = "";
         String input2 = "";
-        int connter = 0;
 
         try
         {
@@ -36,13 +33,14 @@ public class FileReader
             {
                 if(i%2==0)
                 {
+
                     input1 = list.get(i);
-                    System.out.println(input1);
+                    //System.out.println(input1);
                 }
                 else
                 {
                     input2 = list.get(i);
-                    System.out.println(input2);
+                  //  System.out.println(input2);
                     aminokwasy.changePossible(input1, input2);
                 }
 

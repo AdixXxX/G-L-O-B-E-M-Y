@@ -1,4 +1,4 @@
-public class Aminokwasy
+public class AminoAcids
 {
     boolean changePossible(String s1, String s2)
     {
