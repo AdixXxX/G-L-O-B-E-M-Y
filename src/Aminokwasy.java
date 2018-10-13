@@ -13,7 +13,7 @@ public class Aminokwasy
 
         for (int i = 0; i <sb1.length() ; i++)
         {
-            if(sb1.charAt(i) != sb2.charAt(i) && counter< 2)
+            if(sb1.charAt(i) != sb2.charAt(i) && counter < 2)
             {
                 for (int j = i; j < sb1.length() ; j++)
                 {
@@ -26,27 +26,20 @@ public class Aminokwasy
                         counter++;
 
                         sb2 = String.valueOf(s2tab);
-                        System.out.println(counter);
-                        System.out.println(sb1);
-                        System.out.println(sb2);
                     }
                 }
             }
         }
 
-
         if(sb1.equals(sb2))
         {
-            System.out.println("TRUE");
-
+            System.out.println("true");
             return true;
         }
         else
         {
-            System.out.println("cos tu nie gra");
+            System.out.println("false");
             return false;
         }
-
     }
-
 }
